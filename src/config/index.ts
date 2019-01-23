@@ -9,9 +9,12 @@ const ROOT: string = path.resolve(__dirname, '../');
 const NODE_ENV: string = _.defaultTo(process.env.NODE_ENV, 'development');
 
 export const config = {
+  api: {
+    dbUrl: _.defaultTo(process.env.DB_URL, 'metadata.json'),
+  },
   server: {
     host: _.defaultTo(process.env.HOST, 'localhost'),
     port: _.defaultTo(parseInt(process.env.PORT, 10), 3000),
     root: ROOT,
-  }
-}
+  },
+};
