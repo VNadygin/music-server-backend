@@ -12,6 +12,15 @@ This is very simple media server implementation written in node js. It uses expr
 2. Install dependencies by running, `yarn` or `npm i`
 3. Start `yarn start` or `npm run start`
 
+### Endpoints
+
+| resource             | description                                                             |
+| :------------------- | :---------------------------------------------------------------------- |
+| `/health`            | used to check the server health                                         |
+| `/songs`             | returns a list of all songs available on the server                     |
+| `/songs/:songId`     | returns a song by id                                                    |
+| `/storage/:filename` | returns a song file by filename(filename should be taken from metadata) |
+
 ### Env
 
 `NODE_ENV` - node env(production, development, test)
