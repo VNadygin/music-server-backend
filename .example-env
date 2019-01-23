@@ -1,4 +1,5 @@
-NODE_ENV=development
+NODE_ENV=production
 PORT=3005
+HOST=localhost
 DB_PATH=metadata.json
 MEDIA_STORAGE_PATH=media
