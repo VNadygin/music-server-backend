@@ -5,7 +5,6 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
     "start": "npm run serve",
     "serve": "node dist/server.js",
     "dev": "nodemon"

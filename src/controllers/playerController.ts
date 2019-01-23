@@ -24,6 +24,7 @@ export class PlayerController {
       res.status(404);
       res.send('File is not exist');
     }
+
     const contentType = mime.lookup(filePath);
 
     const stat = fs.statSync(filePath);
@@ -38,6 +39,7 @@ export class PlayerController {
 
       const chunkSize = end - start + 1;
       const file = fs.createReadStream(filePath, { start, end });
+
       const head = {
         'Accept-Ranges': 'bytes',
         'Content-Length': chunkSize,
@@ -52,6 +54,7 @@ export class PlayerController {
         'Content-Length': fileSize,
         'Content-Type': contentType,
       };
+
       res.writeHead(200, head);
       fs.createReadStream(filePath).pipe(res);
     }
