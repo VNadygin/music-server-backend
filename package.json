@@ -8,13 +8,13 @@
     "watch": "tsc -w",
     "start": "npm run serve",
     "serve": "node dist/server.js",
-    "dev": "concurrently --kill-others \"npm run watch\" \"npm run start\""
+    "dev": "nodemon"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.0",
     "@types/express": "^4.16.1",
     "@types/lodash": "^4.14.120",
-    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9",
     "prettier": "^1.16.1",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
