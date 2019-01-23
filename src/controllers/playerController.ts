@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import * as fs from 'fs';
+import * as mime from 'mime-types';
 import * as path from 'path';
 import { promisify } from 'util';
 import { config } from '../config';
@@ -23,6 +24,7 @@ export class PlayerController {
       res.status(404);
       res.send('File is not exist');
     }
+    const contentType = mime.lookup(filePath);
 
     const stat = fs.statSync(filePath);
     const fileSize = stat.size;
@@ -40,6 +42,7 @@ export class PlayerController {
         'Accept-Ranges': 'bytes',
         'Content-Length': chunkSize,
         'Content-Range': `bytes ${start}-${end}/${fileSize}`,
+        'Content-Type': contentType,
       };
 
       res.writeHead(206, head);
@@ -47,6 +50,7 @@ export class PlayerController {
     } else {
       const head = {
         'Content-Length': fileSize,
+        'Content-Type': contentType,
       };
       res.writeHead(200, head);
       fs.createReadStream(filePath).pipe(res);

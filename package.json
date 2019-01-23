@@ -23,6 +23,7 @@
   "dependencies": {
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "mime-types": "^2.1.21"
   }
 }
