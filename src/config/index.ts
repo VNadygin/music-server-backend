@@ -10,7 +10,8 @@ const NODE_ENV: string = _.defaultTo(process.env.NODE_ENV, 'development');
 
 export const config = {
   api: {
-    dbUrl: _.defaultTo(process.env.DB_URL, 'metadata.json'),
+    dbUrlPath: _.defaultTo(process.env.DB_PATH, 'metadata.json'),
+    mediaStoragePath: _.defaultTo(process.env.MEDIA_STORAGE_PATH, 'media'),
   },
   server: {
     host: _.defaultTo(process.env.HOST, 'localhost'),

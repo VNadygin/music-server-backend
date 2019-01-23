@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import Api from '../lib/api';
 
 export class SongsController {
-  public api;
+  private api;
 
   constructor() {
     this.api = new Api();

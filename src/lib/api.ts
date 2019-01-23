@@ -7,33 +7,33 @@ const readFileAsync = promisify(fs.readFile);
 const existAsync = promisify(fs.exists);
 
 class Api {
-  private dbUrl: string;
+  private dbUrlPath: string;
 
   constructor() {
-    this.dbUrl = path.resolve(config.api.dbUrl);
+    this.dbUrlPath = path.resolve(config.api.dbUrlPath);
   }
 
   public async find() {
-    const exist = await existAsync(this.dbUrl);
+    const exist = await existAsync(this.dbUrlPath);
 
     if (!exist) {
       throw new Error('DB file is not exist');
     }
 
-    const response = await readFileAsync(this.dbUrl, 'utf8');
+    const response = await readFileAsync(this.dbUrlPath, 'utf8');
     const songs = JSON.parse(response);
 
     return songs;
   }
 
   public async findById(songId: string) {
-    const exist = await existAsync(this.dbUrl);
+    const exist = await existAsync(this.dbUrlPath);
 
     if (!exist) {
       throw new Error('DB file is not exist');
     }
 
-    const response = await readFileAsync(this.dbUrl, 'utf8');
+    const response = await readFileAsync(this.dbUrlPath, 'utf8');
     const songs = JSON.parse(response);
 
     const song = songs.find(item => item.id === songId);
