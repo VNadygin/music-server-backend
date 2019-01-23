@@ -10,8 +10,7 @@ This is very simple media server implementation written in node js. It uses expr
 
 1. Clone this repository
 2. Install dependencies by running, `yarn` or `npm i`
-3. Build project `yarn build`
-4. Start `yarn start`
+3. Start `yarn start` or `npm run start`
 
 ### Env
 
