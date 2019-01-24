@@ -6,7 +6,7 @@ import { promisify } from 'util';
 import { config } from '../config';
 
 const existAsync = promisify(fs.exists);
-
+const statAsync = promisify(fs.stat);
 export class PlayerController {
   private storagePath;
 
@@ -27,7 +27,7 @@ export class PlayerController {
 
     const contentType = mime.lookup(filePath);
 
-    const stat = fs.statSync(filePath);
+    const stat = await statAsync(filePath);
     const fileSize = stat.size;
     const range = req.headers.range;
 
