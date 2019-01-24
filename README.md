@@ -26,8 +26,11 @@ This is very simple media server implementation written in node js. It uses expr
 `NODE_ENV` - node env(production, development, test)
 
 `PORT` - server port. Default is `3000`
+
 `HOST` - server host. Default is `localhost`
+
 `DB_PATH` - path to the metadata json file. Default is `metadata.json`
+
 `MEDIA_STORAGE_PATH` = path to the media storage. Default is `media`
 
 ### Metadata
