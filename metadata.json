@@ -3,9 +3,14 @@
     "id": "1",
     "style": [],
     "thumb": "https://img.discogs.com/MR-gYynUcBsoSwanrpTWBHYUZOY=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-12558500-1537807869-3358.jpeg.jpg",
-    "format": ["Cassette", "Compilation"],
+    "format": [
+      "Cassette",
+      "Compilation"
+    ],
     "country": "Germany",
-    "barcode": ["LC 0245"],
+    "barcode": [
+      "LC 0245"
+    ],
     "label": [
       "Karussell Klassik",
       "MusiCassetten & Schallplatten Karussell",
@@ -13,8 +18,10 @@
       "Wilhelm Schrer & Co."
     ],
     "cover_image": "https://img.discogs.com/XVXDSAYiEg344sQ17DBph5PfPNE=/fit-in/600x928/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-12558500-1537807869-3358.jpeg.jpg",
-    "genre": ["Classical"],
+    "genre": [
+      "Classical"
+    ],
     "title": "Beethoven - Fur Elise",
-    "filename": "1.mp3"
+    "filename": "765a8f38-255c-11e9-ab14-d663bd873d93.mp3"
   }
 ]

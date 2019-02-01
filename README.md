@@ -17,8 +17,8 @@ This is very simple media server implementation written in node js. It uses expr
 | resource             | description                                                             |
 | :------------------- | :---------------------------------------------------------------------- |
 | `/health`            | used to check the server health                                         |
-| `/songs`             | returns a list of all songs available on the server                     |
-| `/songs/:songId`     | returns a song by id                                                    |
+| `/library`           | returns a list of all songs available on the server                     |
+| `/library/:songId`   | returns a song by id                                                    |
 | `/storage/:filename` | returns a song file by filename(filename should be taken from metadata) |
 
 ### Env
@@ -31,7 +31,15 @@ This is very simple media server implementation written in node js. It uses expr
 
 `DB_PATH` - path to the metadata json file. Default is `metadata.json`
 
-`MEDIA_STORAGE_PATH` = path to the media storage. Default is `media`
+`AWS_ACCESS_KEY_ID` - AWS access key id. _Required_
+
+`SECRET_ACCESS_KEY_ID` - AWS secret access key id _Required_
+
+`S3_BUCKET_NAME` - AWS s3 bucked name _Required_
+
+`DISCOGS_API_KEY` - API key for discogs _Required_
+
+`DISCOGS_SEARCH_URL` - discogs api search url
 
 ### Metadata
 

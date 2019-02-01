@@ -1,0 +1,22 @@
+{
+  "library": [
+    {
+      "id": "e8084da8-25a4-11e9-ab14-d663bd873d93",
+      "title": "Feel Good inc",
+      "author": "Gorillaz",
+      "fileName": "e8084da8-25a4-11e9-ab14-d663bd873d93.mp3"
+    },
+    {
+      "id": "765a8f38-255c-11e9-ab14-d663bd873d93",
+      "title": "Fur Elise",
+      "author": "Beethoven",
+      "fileName": "765a8f38-255c-11e9-ab14-d663bd873d93.mp3"
+    },
+    {
+      "id": "f45c9a8f-890a-4211-acdb-2e0de8ea08a1",
+      "title": "Time Lapse",
+      "author": "Ludovico Einaudi",
+      "fileName": "f45c9a8f-890a-4211-acdb-2e0de8ea08a1.mp3"
+    }
+  ]
+}

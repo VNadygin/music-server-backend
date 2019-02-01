@@ -1,4 +1,5 @@
 import * as express from 'express';
+
 import {
   HealthController,
   PlayerController,
@@ -13,8 +14,8 @@ const router = express.Router();
 
 router.get('/health', healthController.responseOk);
 
-router.get('/songs', songsController.getAllSongs);
-router.get('/songs/:songId', songsController.getSongById);
+router.get('/library', songsController.getAllSongs);
+router.get('/library/:songId', songsController.getSongById);
 
 router.get('/storage/:filename', playerController.steamFile);
 

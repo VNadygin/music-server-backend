@@ -1,9 +1,11 @@
+import * as cors from 'cors';
 import * as express from 'express';
 import { config } from './config';
 import router from './routes';
 const app = express();
 
 app.use(router);
+app.use(cors());
 
 app.listen(config.server.port, config.server.host, () => {
   // tslint:disable-next-line:no-console
